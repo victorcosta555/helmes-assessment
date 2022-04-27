@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  back-app:
+    restart: always
+    build: ./sectors
+    container_name: back-app
+    ports:
+      - 8080:8080 
+
+  front-app:
+    build: ./helmes-front
+    container_name: front-app
+    depends_on:
+      - back-app  
+    ports: 
+      - 4200:80
+    links:
+      - back-app       

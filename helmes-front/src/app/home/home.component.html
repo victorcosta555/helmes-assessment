@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <div style="text-align: center; margin: auto">
+    <span>Helmes</span>
+  </div>
+</mat-toolbar>
+<div class="container">
+  <div class="h-100 row align-items-center" style="margin-top: 50%">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput required [formControl]="nameFormControl" [(ngModel)]="homeForm.name">
+      <mat-error *ngIf="nameFormControl.invalid">Insert your name</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select required [(ngModel)]="homeForm.sectorValue">
+        <mat-optgroup *ngFor="let group of sectors"
+                      [label]="group.name"
+                      [disabled]="group.disabled">
+          <mat-option *ngFor="let sector of group.sectors"
+                      [value]="sector.value">
+            {{sector.name}}
+          </mat-option>
+        </mat-optgroup>
+      </mat-select>
+    </mat-form-field>
+    <mat-checkbox style="margin: 0 12px" [(ngModel)]="homeForm.agreeTerms">Agree to terms</mat-checkbox>
+    <div class="col text-center">
+      <button mat-raised-button
+              color="primary"
+              (click)="onClick()"
+              style="width:
+              300px">Save</button>
+    </div>
+  </div>
+</div>
