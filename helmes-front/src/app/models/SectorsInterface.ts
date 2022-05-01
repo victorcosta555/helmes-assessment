@@ -1,5 +1,5 @@
 export interface Sector {
-  value: number,
+  id: number,
   name: string
 }
 

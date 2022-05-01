@@ -14,27 +14,31 @@ import {MatButtonModule} from "@angular/material/button";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { ListUserComponent } from './list-user/list-user.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ListUserComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSelectModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatCheckboxModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MatSnackBarModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatSelectModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatCheckboxModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatSnackBarModule,
+        FormsModule,
+        MatTableModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

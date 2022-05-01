@@ -16,7 +16,7 @@ public class User {
 
     @Id
     @GeneratedValue
-    private Long uuid;
+    private Long id;
 
     @Column(nullable = false)
     private String name;

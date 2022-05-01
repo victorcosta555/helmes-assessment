@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
             this.homeForm = new HomeForm();
             this.openSnackBar("User created");
           } else if (res.status === 404) {
-            this.openSnackBar(`Sector not found ${this.homeForm.sectorValue}`);
+            this.openSnackBar(`Sector not found ${this.homeForm.sector?.name}`);
           }
         });
     }
@@ -50,6 +50,6 @@ export class HomeComponent implements OnInit {
 
 
   isValidForm(): boolean {
-    return this.homeForm.name !== "" && this.homeForm.agreeTerms && this.homeForm.sectorValue > 0;
+    return this.homeForm.name !== "" && this.homeForm.agreeTerms && this.homeForm.sector !== null;
   }
 }

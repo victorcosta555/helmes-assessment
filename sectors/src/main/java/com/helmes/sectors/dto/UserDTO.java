@@ -1,5 +1,6 @@
 package com.helmes.sectors.dto;
 
+import com.helmes.sectors.models.Sector;
 import lombok.*;
 
 import javax.validation.constraints.NotEmpty;
@@ -17,7 +18,7 @@ public class UserDTO {
     public String name;
 
     @NotNull(message = "Sector is mandatory")
-    public Long sectorValue;
+    private SectorDTO sector;
 
     @NotNull
     public Boolean agreeTerms;

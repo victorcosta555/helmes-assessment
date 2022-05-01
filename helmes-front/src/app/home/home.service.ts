@@ -4,7 +4,6 @@ import {SectorGroup} from "../models/SectorsInterface";
 import {SECTORS} from "../data/data";
 import {HomeForm} from "../models/HomeForm";
 import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
-import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'

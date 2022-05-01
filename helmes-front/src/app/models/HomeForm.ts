@@ -1,5 +1,7 @@
+import {Sector} from "./SectorsInterface";
+
 export class HomeForm {
   name: string = "";
-  sectorValue: number = 0;
+  sector: Sector | undefined;
   agreeTerms: boolean = false;
 }
